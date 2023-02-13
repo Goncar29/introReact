@@ -1,0 +1,21 @@
+.TodoSection{
+    background: #fff;
+    border-radius:5rem;
+    border:0.2rem solid #202329;
+    margin:0 2rem;
+    width:calc(100% - 55%);
+    font-size: 2rem;
+    text-align:center;
+    font-weight:700;
+    color:#1e1e1f;
+    box-shadow:0 0.5rem 5rem rgba(32,35,41,.25);
+    padding-top: 5rem;
+    display: inline-block;
+    margin-top: 3rem;
+}
+img{
+    border-radius:5rem;
+    display: flex;
+    background-size: contain;
+    width: 100%;
+}
