@@ -4,6 +4,7 @@ import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
+import { TodoSection } from "./TodoSection";
 import './App.css';
 
 const todos = [
@@ -15,6 +16,7 @@ const todos = [
 function App() {
     return (
         <React.Fragment>
+            <TodoSection></TodoSection>
             <TodoCounter />
             {/* <h2>Has completado 2 de 3 TODOs</h2> */}
             <TodoSearch />

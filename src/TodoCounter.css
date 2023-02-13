@@ -1,6 +1,8 @@
 .TodoCounter {
-    font-size: 24px;
-    text-align: center;
-    margin: 0;
-    padding: 48px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 4rem;
+  width: 50%;
+  display: inline-block;
+  position: absolute;
   }
