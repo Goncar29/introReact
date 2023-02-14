@@ -1,10 +1,11 @@
 import React from "react";
 import './TodoCounter.css'
 
-function TodoCounter(){
+// Desestructuramos los props que pasamos al componente
+function TodoCounter({ total, completed }) {
     return (
         <h2 className="TodoCounter">
-            Has completado 2 de 3 TODOs
+            Has completado {completed} de {total} TODOs
         </h2>
     );
 };
