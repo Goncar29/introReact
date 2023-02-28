@@ -6,16 +6,19 @@ import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import { CreateTodoButton } from '../CreateTodoButton/index.js';
+import { Modal } from '../Modal'
 import { TodoSection } from "../TodoSection";
 
 function AppUI() {
     // Desesctructuramos los valores de nuestro contexto
     const { 
-    error, 
-    loading, 
-    searchedTodos, 
-    completeTodo, 
-    deleteTodo,
+        error, 
+        loading, 
+        searchedTodos, 
+        completeTodo, 
+        deleteTodo,
+        openModal, 
+        setOpenModal, 
 } = React.useContext(TodoContext)
     return (
     <React.Fragment>
@@ -39,7 +42,14 @@ function AppUI() {
             ))}
         </TodoList>
 
-        <CreateTodoButton />
+        {!!openModal && (
+            <Modal>
+        {/* preguntamos con "?" si existe el array de todos */}
+            <p>{searchedTodos[0]?.text}</p>
+        </Modal>
+        )}
+
+        <CreateTodoButton setOpenModal={openModal}/>
         {/* <button>+</button> */}
     </React.Fragment>
     );

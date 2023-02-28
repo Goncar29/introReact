@@ -6,4 +6,5 @@ ul{
     width: 50%;
     display: flex;
     flex-wrap: wrap;
+    font-size: 3rem;
 }
