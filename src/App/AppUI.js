@@ -1,4 +1,5 @@
 import React from "react";
+// Importamos nuestro contexto
 import { TodoContext } from "../TodoContext";
 import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
@@ -13,7 +14,7 @@ function AppUI() {
     error, 
     loading, 
     searchedTodos, 
-    completedTodo, 
+    completeTodo, 
     deleteTodo,
 } = React.useContext(TodoContext)
     return (
