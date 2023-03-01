@@ -39,6 +39,15 @@ function TodoProvider(props){
         })
     }
     
+    // Función para añadir un nuevo TODO
+    const addTodo = (text) => {
+        const newTodos = [...todos];
+        newTodos.push({
+            completed: true,
+            text
+        })
+        saveTodos(newTodos); 
+    };
 
     //Cada vez que reciba un texto va a buscar en toda la lista de todo cual todo cumple con la condicion
     const completeTodo = (text) => {
@@ -73,6 +82,7 @@ function TodoProvider(props){
             searchValue,
             setSearchValue,
             searchedTodos,
+            addTodo,
             completeTodo,
             deleteTodo,
             openModal,
