@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/git@github.com:Goncar29/introReact.git/static/css/main.a2fc4687.css",
+    "main.js": "/git@github.com:Goncar29/introReact.git/static/js/main.e68d3d40.js",
+    "index.html": "/git@github.com:Goncar29/introReact.git/index.html",
+    "main.a2fc4687.css.map": "/git@github.com:Goncar29/introReact.git/static/css/main.a2fc4687.css.map",
+    "main.e68d3d40.js.map": "/git@github.com:Goncar29/introReact.git/static/js/main.e68d3d40.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2fc4687.css",
+    "static/js/main.e68d3d40.js"
+  ]
+}
