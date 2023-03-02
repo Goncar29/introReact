@@ -16,7 +16,7 @@ function TodoProvider(props){
 
     // El estado de nuestra búsqueda
     const [searchValue, setSearchValue] = React.useState('');
-    const [openModal, setOpenModal] = React.useState(false)
+    const [openModal, setOpenModal] = React.useState(false);
 
     
     // Cantidad de TODOs completados
@@ -43,8 +43,8 @@ function TodoProvider(props){
     const addTodo = (text) => {
         const newTodos = [...todos];
         newTodos.push({
-            completed: true,
-            text
+            completed: false,
+            text,
         })
         saveTodos(newTodos); 
     };

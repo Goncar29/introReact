@@ -45,12 +45,13 @@ function AppUI() {
 
         {!!openModal && (
             <Modal>
-        {/* preguntamos con "?" si existe el array de todos */}
-            <p>{searchedTodos[0]?.text}</p>
-        </Modal>
+                <TodoForm/>
+                {/* preguntamos con "?" si existe el array de todos */}
+                {/* <p>{searchedTodos[0]?.text}</p> */}
+            </Modal>
         )}
 
-        <CreateTodoButton setOpenModal={openModal}/>
+        <CreateTodoButton setOpenModal={setOpenModal}/>
         {/* <button>+</button> */}
     </React.Fragment>
     );

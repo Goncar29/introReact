@@ -14,11 +14,11 @@ function TodoForm() {
   // Creamos una función para actualizar el estado de nuestro nuevo TODO
     const onChange = (event) => {
         setNewTodoValue(event.target.value)
-    }
+    };
     // Función para cerrar el modal
     const onCancel = () => {
-        setOpenModal(false)
-    }
+        setOpenModal(false);
+    };
     // Función para agregar nuestro nuevo TODO
     const onSubmit = (event) => {
         // prevent default para evitar recargar la página
@@ -30,28 +30,32 @@ function TodoForm() {
         // También estaría bien resetear nuestro formulario
         setNewTodoValue('')
     }
+    
     return (
         <form onSubmit={onSubmit}>
             <label>Escribe tu nuevo TODO</label>
             <textarea 
                 value={newTodoValue}
                 onChange={onChange}
-                placeholder="Cortar la cebolla"
+                placeholder="Nueva tarea..."
             />
             <div className="TodoForm-buttonContainer">
                 <button 
                     type="button"
                     className="TodoForm-button TodoForm-button--cancel"
-                    onclick={onCancel}
+                    onClick={onCancel}
                 >
                     Cancelar
                 </button>
-                <button type="submit" onclick="">
+                <button 
+                    type="submit"
+                    className="TodoForm-button TodoForm-button--add"
+                >
                     Añadir
                 </button>
             </div>
         </form>
-    )
+    );
 }
 
 export { TodoForm };
