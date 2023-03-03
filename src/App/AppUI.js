@@ -9,6 +9,9 @@ import { TodoForm } from '../TodoForm';
 import { CreateTodoButton } from '../CreateTodoButton/index.js';
 import { Modal } from '../Modal'
 import { TodoSection } from "../TodoSection";
+import { TodosError } from "../TodosError";
+import { TodosLoading } from "../TodosLoading";
+import { EmptyTodos } from "../EmptyTodos";
 
 function AppUI() {
     // Desesctructuramos los valores de nuestro contexto
@@ -29,9 +32,9 @@ function AppUI() {
         <TodoSearch />
         {/* <input placeholder="Cebolla"></input> */}
         <TodoList>
-            {error && <p>Desesperate, hubo un error...</p>}
-            {loading && <p>Estamos cargando, no desesperes...</p>}
-            {(!loading && !searchedTodos.length) && <p>!Crea tu primer TODO!</p>}
+            {error && <TodosError error={error} />}
+            {loading && <TodosLoading />}
+            {(!loading && !searchedTodos.length) && <EmptyTodos />}
             {searchedTodos.map(todo => (
                 <TodoItem 
                 key={todo.text} 
