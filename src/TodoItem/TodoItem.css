@@ -9,6 +9,14 @@
     border-radius:5rem;
     width: 48%;
 }
+.TodoItem:hover{
+    transition: 1s;
+    background-color: #2da7293b;
+    box-shadow: 0 0 1rem #81a729,
+    0 0 3rem #81a729,
+    0 0 6rem #81a729,
+    0 0 10rem #81a729;
+}
 .TodoItem-p{
     margin:2rem 0 2rem 2rem;
     width:calc(100% - 12rem);
