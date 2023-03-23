@@ -8,6 +8,7 @@
     box-shadow:0 0.5rem 5rem rgba(32,35,41,.15);
     border-radius:5rem;
     width: 48%;
+    height: 6rem;
 }
 .TodoItem:hover{
     transition: 1s;
