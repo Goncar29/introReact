@@ -2,9 +2,9 @@ import React from 'react';
 import { useLocalStorage } from './useLocalStorage';
 
 // Al crear el contexto también podemos pasarle un valor inicial entre los paréntesis
-const TodoContext = React.createContext();
+// const TodoContext = React.createContext();
 
-function TodoProvider(props){
+function useTodos(){
     // Nos traemos todo el estado y las funciones de nuestra aplicación que queremos globales
     // Desestructuramos los datos que retornamos de nuestro custom hook, y le pasamos los argumentos que necesitamos (nombre y estado inicial)
     const {
@@ -73,8 +73,7 @@ function TodoProvider(props){
     };
     
   // Retornamos nuestro proveedor con nuestro contexto en la etiqueta value, que recibirá a toda nuestra aplicación, por eso necesitamos la prop children
-    return (
-        <TodoContext.Provider value={{
+    return {
             loading,
             error,
             totalTodos,
@@ -87,11 +86,8 @@ function TodoProvider(props){
             deleteTodo,
             openModal,
             setOpenModal,
-        }}>
-            {props.children}
-        </TodoContext.Provider>
-    )
+        }
 }
 
 // Exportamos nuestro proveedor y nuestro contexto, en el context también esta el consumer, para acceder a nuestro contexto
-export { TodoContext, TodoProvider };
+export { useTodos };
