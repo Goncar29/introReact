@@ -1,6 +1,6 @@
 form {
-    width: 90%;
-    max-width: 300px;
+    /* width: 90%;
+    max-width: 300px; */
     background: linear-gradient(15deg, rgb(48, 141, 79) 0%, rgb(83, 182, 113) 25%, rgba(0,212,255,1) 100%);
     padding: 33px 40px;
     display: flex;
