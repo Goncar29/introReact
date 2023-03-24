@@ -56,9 +56,13 @@ return (
             error={error}
             loading={loading}
             searchedTodos={searchedTodos}
+            totalTodos={totalTodos}
+            searchText={searchValue}
             onError={() => <TodosError />}
             onLoading={() => <TodosLoading />}
             onEmptyTodos={() => <EmptyTodos />}
+            onEmptySearchResults={
+                (searchText) => <p>No hay resultados para "{searchText}"</p>}
             render={todo => (
                 <TodoItem 
                     key={todo.text} 
