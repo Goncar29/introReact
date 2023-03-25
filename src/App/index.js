@@ -39,7 +39,7 @@ return (
                     setOpenModal={setOpenModal}
                 />
         </TodoSection>
-        <TodoHeader>
+        <TodoHeader loading={loading}>
             <TodoCounter 
                 totalTodos={totalTodos}
                 completedTodos={completedTodos}

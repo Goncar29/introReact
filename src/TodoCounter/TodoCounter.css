@@ -6,3 +6,7 @@
   display: inline-block;
   position: absolute;
   }
+
+  .TodoCounter--loading {
+    opacity: 25%;
+  }
