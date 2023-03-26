@@ -1,7 +1,7 @@
 import React from "react";
 import './TodoSection.css'
 
-function TodoSection({addTodo, setOpenModal, loading, children }) {
+function TodoSection({addTodo, loading, children }) {
 
     React.Children
         .toArray(children)
@@ -22,8 +22,6 @@ function TodoSection({addTodo, setOpenModal, loading, children }) {
         event.preventDefault();
         // Utilizamos nuestra función para añadir nuestro TODO
         addTodo(newTodoValue)
-        // Cerramos nustro modal
-        setOpenModal(false)
         // También estaría bien resetear nuestro formulario
         setNewTodoValue('')
     }
