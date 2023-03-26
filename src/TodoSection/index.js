@@ -1,7 +1,13 @@
 import React from "react";
 import './TodoSection.css'
 
-function TodoSection({addTodo, setOpenModal}) {
+function TodoSection({addTodo, setOpenModal, loading, children }) {
+
+    React.Children
+        .toArray(children)
+        .map(child => React.cloneElement(child, { loading }))
+
+
       // Creamos un estado para nuestro nuevo TODO
     const [newTodoValue, setNewTodoValue] = React.useState('');
     // Desestructuramos las funciones que necesitamos para añadir un TODO y cerrar nuestro modal
@@ -22,13 +28,14 @@ function TodoSection({addTodo, setOpenModal}) {
         setNewTodoValue('')
     }
     return(
-        <section className='TodoSection'>
-            <form onSubmit={onSubmit} className='form'>
+        <section className='TodoSection' >
+            <form onSubmit={onSubmit} className='form' >
                 <label>Escribe tu nuevo TODO</label>
                 <textarea className="form-tarea"
                     value={newTodoValue}
                     onChange={onChange}
                     placeholder="Nueva tarea..."
+                    disabled={loading}
                 />
                 <button 
                     type="submit"
@@ -37,7 +44,7 @@ function TodoSection({addTodo, setOpenModal}) {
                     Añadir
                 </button>
             </form>
-            <img src="https://i.pinimg.com/564x/7d/5d/e6/7d5de604779b913734a056db644899f6.jpg" />
+            <img alt="imagen" src="https://i.pinimg.com/564x/7d/5d/e6/7d5de604779b913734a056db644899f6.jpg" />
         </section>
     );
 }

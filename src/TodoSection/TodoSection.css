@@ -75,3 +75,7 @@ button:hover{
     0 0 6rem #81a729,
     0 0 10rem #81a729;
 }
+
+.form-tarea:disabled{
+    opacity: 25%;
+}

@@ -32,7 +32,7 @@ function App(){
 } = useTodos()
 return (
     <React.Fragment>
-        <TodoSection>
+        <TodoSection loading={loading}>
             <CreateTodoButton setOpenModal={setOpenModal}/>
             <TodoForm
                     addTodo={addTodo}
