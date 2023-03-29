@@ -26,7 +26,6 @@ function TodoSection({addTodo, loading, children }) {
         setNewTodoValue('')
     }
     return(
-        <section className='TodoSection' >
             <form onSubmit={onSubmit} className='form' >
                 <label>Escribe tu nuevo TODO</label>
                 <textarea className="form-tarea"
@@ -41,9 +40,8 @@ function TodoSection({addTodo, loading, children }) {
                 >
                     Añadir
                 </button>
+                <img alt="imagen" src="https://i.pinimg.com/564x/7d/5d/e6/7d5de604779b913734a056db644899f6.jpg" />
             </form>
-            <img alt="imagen" src="https://i.pinimg.com/564x/7d/5d/e6/7d5de604779b913734a056db644899f6.jpg" />
-        </section>
     );
 }
 

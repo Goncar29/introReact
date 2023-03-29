@@ -2,8 +2,8 @@
     background:#e4eff5;
     border-radius:5rem;
     border:0.2rem solid #202329;
-    margin:0 2rem;height:6rem;
-    width:calc(100% - 53%);
+    height:6rem;
+    width: 59%;
     font-size: 2rem;
     text-align:center;
     font-weight:700;
@@ -22,4 +22,13 @@
 
 .TodoSearch:disabled{
     opacity: 25%;
+}
+
+@media (max-width: 1024px) {
+    .TodoSearch{
+        width: 98%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

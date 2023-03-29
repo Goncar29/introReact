@@ -1,18 +1,19 @@
 html {
-  font-size: 62.5%;
-  background: linear-gradient(15deg, rgb(4, 95, 34) 0%, rgb(9, 121, 43) 25%, rgba(0,212,255,1) 100%);
+    font-size: 62.5%;
+    background: linear-gradient(15deg, rgb(4, 95, 34) 0%, rgb(9, 121, 43) 25%, rgba(0,212,255,1) 100%);
+    height: 100%;
 }
 body {
-  margin: 0;
-  font-family: 'Caveat', 'Comfortaa', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'Caveat', 'Comfortaa', 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: 'Caveat', 'Comfortaa', cursive, 'Courier New',
-    monospace;
+    font-family: 'Caveat', 'Comfortaa', cursive, 'Courier New',
+        monospace;
 }
 

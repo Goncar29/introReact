@@ -1,8 +1,6 @@
 form {
-    /* width: 90%;
-    max-width: 300px; */
     background: linear-gradient(15deg, rgb(48, 141, 79) 0%, rgb(83, 182, 113) 25%, rgba(0,212,255,1) 100%);
-    padding: 33px 40px;
+    padding: 3.3rem 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,22 +10,22 @@ form {
 label {
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2rem;
     color: #1E1E1F;
-    margin-bottom: 26px;
+    margin-bottom: 2.6rem;
 }
 
 textarea {
     background-color: #F9FBFC;
-    border: 2px solid #202329;
-    border-radius: 2px;
-    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+    border: 0.2rem solid #202329;
+    border-radius: 0.2rem;
+    box-shadow: 0 .5rem 5rem rgba(32, 35, 41, 0.25);
     color: #1E1E1F;
-    font-size: 20px;
+    font-size: 2rem;
     text-align: center;
-    padding: 12px;
-    height: 96px;
-    width: calc(100% - 25px);
+    padding: 1.2rem;
+    height: 9.6rem;
+    width: calc(100% - 2.5rem);
 }
 
 textarea::placeholder {
@@ -41,7 +39,7 @@ textarea:focus {
 }
 
 .TodoForm-buttonContainer {
-    margin-top: 14px;
+    margin-top: 1.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,12 +49,12 @@ textarea:focus {
 .TodoForm-button {
     cursor: pointer;
     display: inline-block;
-    font-size: 20px;
+    font-size: 2rem;
     color: #202329;
     font-weight: 400;
-    width: 120px;
-    height: 48px;
-    border-radius: 2px;
+    width: 12rem;
+    height: 4.8rem;
+    border-radius: 0.2rem;
     border: none;
     font-family: 'Montserrat';
 }

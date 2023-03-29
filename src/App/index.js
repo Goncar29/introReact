@@ -35,13 +35,11 @@ function App(){
 } = useTodos()
 return (
     <React.Fragment>
-        <TodoSection loading={loading}>
-            <CreateTodoButton setOpenModal={setOpenModal}/>
-            <TodoForm
+            <TodoSection
+                    loading={loading}
                     addTodo={addTodo}
                     setOpenModal={setOpenModal}
                 />
-        </TodoSection>
         <TodoHeader loading={loading}>
             <TodoCounter 
                 totalTodos={totalTodos}
