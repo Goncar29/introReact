@@ -1,13 +1,15 @@
 .TodoList-container{
-    margin: 17rem 0rem 0rem 0rem;
+    margin: 17rem auto 0rem auto;
     position: absolute;
     list-style: none;
     width: 60%;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     font-size: 3rem;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 ul{

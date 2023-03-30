@@ -20,7 +20,6 @@
 .TodoItem-p{
     margin:2rem 0 2rem 2rem;
     width:calc(100% - 12rem);
-    font-size:2.5rem;
     line-height:2rem;
     font-weight:400;
 }
