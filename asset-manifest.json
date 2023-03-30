@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/introReact/static/css/main.72141dc3.css",
+    "main.css": "/introReact/static/css/main.24bc0d45.css",
     "main.js": "/introReact/static/js/main.26aeef8e.js",
     "index.html": "/introReact/index.html",
     "static/media/delete.svg": "/introReact/static/media/delete.2df968658f3a5a5e4e6bc3929bcb9ef8.svg",
     "static/media/check.svg": "/introReact/static/media/check.8b522babc550faf8863c748614d8dc6b.svg",
-    "main.72141dc3.css.map": "/introReact/static/css/main.72141dc3.css.map",
+    "main.24bc0d45.css.map": "/introReact/static/css/main.24bc0d45.css.map",
     "main.26aeef8e.js.map": "/introReact/static/js/main.26aeef8e.js.map"
   },
   "entrypoints": [
-    "static/css/main.72141dc3.css",
+    "static/css/main.24bc0d45.css",
     "static/js/main.26aeef8e.js"
   ]
 }
