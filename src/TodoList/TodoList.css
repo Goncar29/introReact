@@ -6,7 +6,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     font-size: 3rem;
 }
 
@@ -16,6 +16,12 @@ ul{
 
 @media (max-width: 1024px) {
     .TodoList-container{
-        width: 98%;
+        width: 98%;    
+        align-items: baseline;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        font-size: 3rem;
+        flex-direction: column;
+        align-content: center;
     }
 }
