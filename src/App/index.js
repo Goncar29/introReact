@@ -18,21 +18,27 @@ import { ChangeAlert } from "../ChangeAlert";
 
 function App(){
      // Desesctructuramos los valores de nuestro contexto
-    const { 
-        error, 
-        loading, 
-        searchedTodos, 
-        completeTodo, 
-        deleteTodo,
-        openModal, 
-        setOpenModal, 
-        totalTodos, 
-        completedTodos,
-        searchValue, 
-        setSearchValue,
-        addTodo,
-        sincronizeTodos,
-} = useTodos()
+    const { states, stateUpdaters } = useTodos()
+
+const {
+    error, 
+    loading, 
+    searchedTodos, 
+    completeTodo, 
+    openModal,  
+    totalTodos, 
+    completedTodos,
+    searchValue, 
+} = states
+
+const {
+    setOpenModal,
+    addTodo,
+    deleteTodo,
+    setSearchValue,
+    sincronizeTodos,
+} = stateUpdaters
+
 return (
     <React.Fragment>
             <TodoSection

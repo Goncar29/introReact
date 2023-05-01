@@ -73,22 +73,29 @@ function useTodos(){
         // Cada que el usuario interactúe con nuestra aplicación se guardarán los TODOs con nuestra nueva función
     };
     
+    const states = {
+        loading,
+        error,
+        totalTodos,
+        completedTodos,
+        searchValue,
+        searchedTodos,
+        openModal,
+    };
+    const stateUpdaters = {
+        setSearchValue,
+        addTodo,
+        completeTodo,
+        deleteTodo,
+        setOpenModal,
+        sincronizeTodos,
+    }
+
   // Retornamos nuestro proveedor con nuestro contexto en la etiqueta value, que recibirá a toda nuestra aplicación, por eso necesitamos la prop children
     return {
-            loading,
-            error,
-            totalTodos,
-            completedTodos,
-            searchValue,
-            setSearchValue,
-            searchedTodos,
-            addTodo,
-            completeTodo,
-            deleteTodo,
-            openModal,
-            setOpenModal,
-            sincronizeTodos,
-        }
+        states,
+        stateUpdaters
+    }
 }
 
 // Exportamos nuestro proveedor y nuestro contexto, en el context también esta el consumer, para acceder a nuestro contexto
