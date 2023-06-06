@@ -13,7 +13,7 @@ function useTodos(){
         sincronizeItem: sincronizeTodos,
         loading,
         error,
-    } = useLocalStorage('TODOS_V1', []);
+    } = useLocalStorage('TODOS_V2', []);
 
     // El estado de nuestra búsqueda
     const [searchValue, setSearchValue] = React.useState('');
@@ -42,17 +42,19 @@ function useTodos(){
     
     // Función para añadir un nuevo TODO
     const addTodo = (text) => {
+        const id = newTodoId(todos);
         const newTodos = [...todos];
         newTodos.push({
             completed: false,
             text,
+            id,
         })
         saveTodos(newTodos); 
     };
 
     //Cada vez que reciba un texto va a buscar en toda la lista de todo cual todo cumple con la condicion
-    const completeTodo = (text) => {
-        const todoIndex = todos.findIndex(todo => todo.text === text)
+    const completeTodo = (id) => {
+        const todoIndex = todos.findIndex(todo => todo.id === id)
         // creamos una nueva lista de todos (las mismas)
         const newTodos = [...todos];
         //y marcamos a ese todo que cumple con la condicion el valor true
@@ -62,8 +64,8 @@ function useTodos(){
         // Cada que el usuario interactúe con nuestra aplicación se guardarán los TODOs con nuestra nueva función
     };
 
-    const deleteTodo = (text) => {
-        const todoIndex = todos.findIndex(todo => todo.text === text)
+    const deleteTodo = (id) => {
+        const todoIndex = todos.findIndex(todo => todo.id === id)
         // creamos una nueva lista de todos (las mismas)
         const newTodos = [...todos];
         //con el metodo splice quitamos el todo
@@ -96,6 +98,17 @@ function useTodos(){
         states,
         stateUpdaters
     }
+}
+// creamos una funcion para que genere los ID de los todos
+function newTodoId(todoList){
+    
+    if (!todoList.length){
+        return 1;
+    }
+
+    const idList = todoList.map((todo) => todo.id);
+    const idMax = Math.max(...idList);
+    return idMax + 1;
 }
 
 // Exportamos nuestro proveedor y nuestro contexto, en el context también esta el consumer, para acceder a nuestro contexto
