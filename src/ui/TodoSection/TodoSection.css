@@ -1,0 +1,75 @@
+img{
+    border-radius:5rem;
+    display: flex;
+    background-size: contain;
+    width: 100%;
+}
+.Button {
+    background-color: #61DAFA;
+    box-shadow: 0rem 0.5rem 2.5rem rgba(97, 218, 250, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 5rem;
+    position: fixed;
+    font-weight: bold;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.4rem;
+    width: 6.4rem;
+    transform: rotate(0);
+    transition: .3s ease;
+}
+
+.Button:hover {
+    transform: rotate(224deg);
+}
+.form{
+    background: rgba(48, 69, 73, 0.2);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5rem;
+    width: 30%;
+    margin: 1rem;
+    margin-right: 1rem;
+}
+label{
+    font-size: 3rem;
+}
+.form-tarea {
+    background-color: #F9FBFC;
+    border: 0.2rem solid #202329;
+    border-radius: 0.2rem;
+    box-shadow: 0rem 0.5rem 5rem rgba(32, 35, 41, 0.25);
+    color: #1E1E1F;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1.2rem;
+    height: 5rem;
+}
+button{
+    margin: 2rem 0;
+}
+button:hover{
+    transition: 2s;
+    background: #61DAFA;
+    box-shadow: 0 0 1rem #81a729,
+    0 0 3rem #81a729,
+    0 0 6rem #81a729,
+    0 0 10rem #81a729;
+}
+
+.form-tarea:disabled{
+    opacity: 25%;
+}
+
+
+@media (max-width: 1024px) {
+    .form{
+        display: none;
+    }
+}

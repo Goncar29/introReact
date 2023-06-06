@@ -1,0 +1,24 @@
+.TodoCounter {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    width: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.TodoCounter--loading {
+    opacity: 25%;
+}
+
+@media (max-width: 1024px) {
+    .TodoCounter{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

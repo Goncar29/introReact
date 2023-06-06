@@ -1,0 +1,29 @@
+.TodoList-container{
+    margin: 17rem auto 0rem auto;
+    position: absolute;
+    list-style: none;
+    width: 60%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    font-size: 3rem;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    list-style:none;
+}
+
+@media (max-width: 1024px) {
+    .TodoList-container{
+        width: 98%;    
+        align-items: baseline;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        font-size: 3rem;
+        flex-direction: column;
+        align-content: center;
+    }
+}
