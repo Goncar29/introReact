@@ -99,9 +99,9 @@ function useTodos(){
         stateUpdaters
     }
 }
-// creamos una funcion para que genere los ID de los todos
+// creamos una funcion para que genere los IDs de los todos de fomra automatica
 function newTodoId(todoList){
-    
+
     if (!todoList.length){
         return 1;
     }

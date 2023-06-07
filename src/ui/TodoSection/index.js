@@ -1,11 +1,11 @@
 import React from "react";
 import './TodoSection.css'
 
-function TodoSection({addTodo, loading, children }) {
+function TodoSection(props) {
 
     React.Children
-        .toArray(children)
-        .map(child => React.cloneElement(child, { loading }))
+        .toArray(props.children)
+        .map(child => React.cloneElement(child, props.loading ))
 
 
       // Creamos un estado para nuestro nuevo TODO
@@ -21,10 +21,11 @@ function TodoSection({addTodo, loading, children }) {
         // prevent default para evitar recargar la página
         event.preventDefault();
         // Utilizamos nuestra función para añadir nuestro TODO
-        addTodo(newTodoValue)
+        props.submitEvent(newTodoValue)
         // También estaría bien resetear nuestro formulario
         setNewTodoValue('')
     }
+
     return(
             <form onSubmit={onSubmit} className='form' >
                 <label>Escribe tu nuevo TODO</label>
@@ -32,7 +33,7 @@ function TodoSection({addTodo, loading, children }) {
                     value={newTodoValue}
                     onChange={onChange}
                     placeholder="Nueva tarea..."
-                    disabled={loading}
+                    disabled={props.loading}
                 />
                 <button 
                     type="submit"

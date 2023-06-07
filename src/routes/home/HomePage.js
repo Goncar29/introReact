@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useTodos } from "../useTodos";
 // Importamos nuestro contexto
 import { TodoHeader } from "../../ui/TodoHeader";
@@ -17,6 +18,7 @@ import { ChangeAlert } from "../../ui/ChangeAlert";
 
 
 function HomePage(){
+    const navigate = useNavigate();
      // Desesctructuramos los valores de nuestro contexto
     const { states, stateUpdaters } = useTodos()
 
@@ -24,15 +26,15 @@ const {
     error, 
     loading, 
     searchedTodos, 
-    openModal,  
+    // openModal,  
     totalTodos, 
     completedTodos,
     searchValue, 
 } = states
 
 const {
-    setOpenModal,
-    addTodo,
+    // setOpenModal,
+    // addTodo,
     completeTodo, 
     deleteTodo,
     setSearchValue,
@@ -43,8 +45,9 @@ return (
     <React.Fragment>
             <TodoSection
                     loading={loading}
-                    addTodo={addTodo}
-                    setOpenModal={setOpenModal}
+                    // addTodo={addTodo}
+                    // setOpenModal={setOpenModal}
+                    submitEvent={() => console.log('Llamar a addTodo')}
                 />
         <TodoHeader loading={loading}>
             <TodoCounter 
@@ -77,7 +80,7 @@ return (
                     key={todo.text} 
                     text={todo.text} 
                     completed={todo.completed}
-                    onEdit={() => console.log('Edit completed')}
+                    onEdit={() => navigate('/edit/' + todo.id)}
                     onComplete={() => completeTodo(todo.text)}
                     onDelete={() => deleteTodo(todo.text)}
                 />
@@ -90,26 +93,31 @@ return (
                     key={todo.id} 
                     text={todo.text} 
                     completed={todo.completed}
-                    onEdit={() => console.log('Edit completed')}
+                    onEdit={() => navigate('/edit/' + todo.id)}
                     onComplete={() => completeTodo(todo.id)}
                     onDelete={() => deleteTodo(todo.id)}
                 />
             )}
             
         </TodoList>
+        
 
-        {!!openModal && (
-            <Modal>
-                <TodoForm
+        {/* {!!openModal && ( */}
+            {/* <Modal> */}
+                {/* <TodoForm
                     addTodo={addTodo}
                     setOpenModal={setOpenModal}
-                />
+                /> */}
                 {/* preguntamos con "?" si existe el array de todos */}
                 {/* <p>{searchedTodos[0]?.text}</p> */}
-            </Modal>
-        )}
+            {/* </Modal> */}
+        {/* )} */}
+        
 
-        <CreateTodoButton setOpenModal={setOpenModal}/>
+        <CreateTodoButton 
+            onClick={() =>navigate('/new/')}
+            // setOpenModal={setOpenModal}
+        />
         {/* <button>+</button> */}
 
         <ChangeAlert 
