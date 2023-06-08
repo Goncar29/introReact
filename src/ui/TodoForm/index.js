@@ -22,10 +22,10 @@ function TodoForm( props ) {
         event.preventDefault();
         // Utilizamos nuestra función para añadir nuestro TODO
         props.submitEvent(newTodoValue)
-        // Cerramos nustro modal
-        navigate('/');
         // También estaría bien resetear nuestro formulario
         setNewTodoValue('')
+        // Cerramos nustro modal
+        navigate('/');
     }
     
     return (

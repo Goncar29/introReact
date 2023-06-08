@@ -17,7 +17,7 @@ function useTodos(){
 
     // El estado de nuestra búsqueda
     const [searchValue, setSearchValue] = React.useState('');
-    const [openModal, setOpenModal] = React.useState(false);
+    // const [openModal, setOpenModal] = React.useState(false);
 
     
     // Cantidad de TODOs completados
@@ -64,6 +64,17 @@ function useTodos(){
         // Cada que el usuario interactúe con nuestra aplicación se guardarán los TODOs con nuestra nueva función
     };
 
+    const editTodo = (id, newText) => {
+        const todoIndex = todos.findIndex(todo => todo.id === id)
+        // creamos una nueva lista de todos (las mismas)
+        const newTodos = [...todos];
+        //y marcamos a ese todo que cumple con la condicion el valor true
+        newTodos[todoIndex].text = newText;
+        // despues mandamos a renderizar el nuevo estado
+        saveTodos(newTodos); 
+        // Cada que el usuario interactúe con nuestra aplicación se guardarán los TODOs con nuestra nueva función
+    };
+
     const deleteTodo = (id) => {
         const todoIndex = todos.findIndex(todo => todo.id === id)
         // creamos una nueva lista de todos (las mismas)
@@ -82,23 +93,22 @@ function useTodos(){
         completedTodos,
         searchValue,
         searchedTodos,
-        openModal,
+        // openModal,
     };
     const stateUpdaters = {
         setSearchValue,
         addTodo,
         completeTodo,
+        editTodo,
         deleteTodo,
-        setOpenModal,
         sincronizeTodos,
+        // setOpenModal,
     }
 
   // Retornamos nuestro proveedor con nuestro contexto en la etiqueta value, que recibirá a toda nuestra aplicación, por eso necesitamos la prop children
-    return {
-        states,
-        stateUpdaters
-    }
+    return { states, stateUpdaters }
 }
+
 // creamos una funcion para que genere los IDs de los todos de fomra automatica
 function newTodoId(todoList){
 
