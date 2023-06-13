@@ -8,8 +8,8 @@ function EditTodoPage() {
     const params = useParams();
     const id = Number(params.id);
     
-    const { state, stateUpdaters } = useTodos();
-    const { loading, getTodo } = state;
+    const { states, stateUpdaters } = useTodos();
+    const { loading, getTodo } = states;
     const { editTodo } = stateUpdaters;
 
     let todoText;

@@ -54,7 +54,6 @@ function useTodos(){
 
     const getTodo = (id) => {
         const todoIndex = todos.findIndex(todo => todo.id === id)
-        console.log([todos[todoIndex]])
         return todos[todoIndex];
     }
 
