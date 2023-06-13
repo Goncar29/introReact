@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function TodoForm( props ) {
     const navigate = useNavigate();
     // Creamos un estado para nuestro nuevo TODO
-    const [newTodoValue, setNewTodoValue] = React.useState('');
+    const [newTodoValue, setNewTodoValue] = React.useState(props.defaultTodoText || '');
     // Desestructuramos las funciones que necesitamos para añadir un TODO y cerrar nuestro modal
     
   // Creamos una función para actualizar el estado de nuestro nuevo TODO

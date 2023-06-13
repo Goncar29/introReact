@@ -52,6 +52,12 @@ function useTodos(){
         saveTodos(newTodos); 
     };
 
+    const getTodo = (id) => {
+        const todoIndex = todos.findIndex(todo => todo.id === id)
+        console.log([todos[todoIndex]])
+        return todos[todoIndex];
+    }
+
     //Cada vez que reciba un texto va a buscar en toda la lista de todo cual todo cumple con la condicion
     const completeTodo = (id) => {
         const todoIndex = todos.findIndex(todo => todo.id === id)
@@ -93,6 +99,7 @@ function useTodos(){
         completedTodos,
         searchValue,
         searchedTodos,
+        getTodo,
         // openModal,
     };
     const stateUpdaters = {

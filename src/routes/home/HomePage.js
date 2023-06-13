@@ -80,7 +80,14 @@ return (
                     key={todo.text} 
                     text={todo.text} 
                     completed={todo.completed}
-                    onEdit={() => navigate('/edit/' + todo.id)}
+                    onEdit={() => {
+                        navigate(
+                            '/edit/' + todo.id, 
+                            {
+                                state: { todo }
+                            }
+                        );
+                    }}
                     onComplete={() => completeTodo(todo.text)}
                     onDelete={() => deleteTodo(todo.text)}
                 />
