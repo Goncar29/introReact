@@ -21,6 +21,7 @@ function HomePage(){
     const navigate = useNavigate();
      // Desesctructuramos los valores de nuestro contexto
     const { states, stateUpdaters } = useTodos()
+    const  { addTodo } = stateUpdaters;
 
 const {
     error, 
@@ -47,7 +48,8 @@ return (
                     loading={loading}
                     // addTodo={addTodo}
                     // setOpenModal={setOpenModal}
-                    submitEvent={() => console.log('Llamar a addTodo')}
+                    submitEvent={(text)=> addTodo(text)}
+
                 />
         <TodoHeader loading={loading}>
             <TodoCounter 
